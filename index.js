@@ -62,11 +62,11 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 function is31Flavors(array){
-  if (array.length === 31){
-      return true;
-  } else {
-      return false;
-  }
+    if (array.length === 31){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 console.log(is31Flavors(originalFlavors));
@@ -143,11 +143,14 @@ function removeFlavorByName(array, string){
         if (array[i] === string){
             array.splice(i, 1);
         }
+
     }
+
     return array;
 }
 
 console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -170,11 +173,14 @@ Use the filterByWord function below to do the following:
 */
 function filterByWord(array, string){
     const newArray = [];
+
     for (let i = 0; i < array.length; i++){
-        if (array[i].includes(string)){
-            newArray.push(array[i]); 
+
+        if (array[i].includes(string)) {
+            newArray.push(array[i]);
         } 
-    }
+    }    
+
     return newArray;
 }
 
@@ -192,10 +198,18 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(originalFlavors){
+    let obj = {};
+
+    for (let i = 0; i < originalFlavors.length; i++){
+        let item = originalFlavors[i];
+        obj[item] = (obj[item] + 1);
+    }
+
+    return obj;
 }
 
+console.log(getAverageWordLength(originalFlavors));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
@@ -210,8 +224,8 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
+function getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors){
+    let obj2 = {originalFlavors, newFlavors, seasonalFlavors, regionalFlavors};
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
